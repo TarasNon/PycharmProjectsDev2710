@@ -21,7 +21,7 @@ def load_game():
         diff = int(input('Please choose game difficulty from 1 to 5:'))
         while 5 < diff or diff < 1:
             diff = int(input("Please insert a number between 1 - 5: "))
-        print("Its OK!")
+        print("Welcome to the game")
     except:
         print("Choose right number  PLS!")
 
