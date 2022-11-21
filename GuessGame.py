@@ -1,24 +1,29 @@
 import random
-import sys
 
-print("Let's play a guessing game.")
+print("TRY TO GUESS NUMBER!!")
 
-secret_number = int(input("Pick a number between 1 and 50:"))
-if guess > 50:
+difficulty = int(input("Choose number from 1 to 50 to generate difficulty: "))
+for x in range(difficulty):
+    secret_number = x
+
+if difficulty > 50:
     print("out of range")
-    sys.exit(0)
-gennum = random.randint(1, 50)
-def checkguess():
-    global guess
-    global gennum
-    if guess == gennum:
+
+generate_number = random.randint(1, int(difficulty))
+secret_number = generate_number
+
+
+def check():
+    global difficulty
+
+    if difficulty == secret_number:
         print("You got it!!!")
-    elif guess < gennum:
-        guess = int(input("Try again too low:"))
-        checkguess()
-    elif guess > gennum:
-        guess = int(input("Try again too high:"))
-        checkguess()
+    elif difficulty < secret_number:
+        difficulty = int(input("Try again too low:"))
+        check()
+    elif difficulty > secret_number:
+        difficulty = int(input("Try again too high:"))
+        check()
 
-checkguess()
 
+check()
