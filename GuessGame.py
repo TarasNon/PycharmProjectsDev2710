@@ -1,13 +1,13 @@
 import random
 import sys
 
-print ("Let's play a guessing game.")
+print("Let's play a guessing game.")
 
-guess = int(input("Pick a number between 1 and 100:"))
-if guess > 100:
+secret_number = int(input("Pick a number between 1 and 50:"))
+if guess > 50:
     print("out of range")
     sys.exit(0)
-gennum = random.randint(1,100)
+gennum = random.randint(1, 50)
 def checkguess():
     global guess
     global gennum
@@ -19,4 +19,6 @@ def checkguess():
     elif guess > gennum:
         guess = int(input("Try again too high:"))
         checkguess()
+
 checkguess()
+
