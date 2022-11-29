@@ -2,17 +2,27 @@ import random
 import time
 
 
-def printw(string):
-    print(string)
-    time.sleep(0.7)
 
 
 generate_number_of_difficulty = int(input("Choose numbers of difficulty from 1 to 101: "))
+generate_sequence = int(input(f"How many numbers you want to remember to {generate_number_of_difficulty}: "))
 
+rand_list=[]
 
-def generate():
-    list_diff = []
-    generate_sequence = int(input(f"How many numbers you want to remember from {generate_number_of_difficulty}: "))
-    for i in range(generate_sequence):
-        list_diff.append(random.randint(1, generate_number_of_difficulty))
-    print(list_diff)
+for i in range(0, generate_sequence):
+    rand_list.append(random.randint(1, generate_sequence))
+print(rand_list)
+
+time.sleep(0.7)
+for i in range(0, 50):
+    print('')
+
+for i in range(0, generate_sequence):
+    print("Enter number you remenber" +str(i))
+    guess = int(input())
+    if guess == rand_list[i]:
+        print ("good")
+    else:
+        print("Bad")
+        break
+
