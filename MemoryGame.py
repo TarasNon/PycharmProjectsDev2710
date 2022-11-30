@@ -14,11 +14,11 @@ for i in range(0, generate_sequence):
 print(rand_list)
 
 time.sleep(0.7)
-for i in range(0, 50):
+for i in range(0, 100):
     print('')
 
 for i in range(0, generate_sequence):
-    print("Enter number you remenber" +str(i))
+    print("Enter number you remember")
     guess = int(input())
     if guess == rand_list[i]:
         print ("good")
