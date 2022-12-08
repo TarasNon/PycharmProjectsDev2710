@@ -1,13 +1,16 @@
 import random
 
-print("TRY TO GUESS NUMBER!!")
+
+def guess():
+    print("TRY TO GUESS NUMBER!!")
+
 
 difficulty = int(input("Choose number from 1 to 50 to generate difficulty: "))
 for x in range(difficulty):
     secret_number = x
 
-if difficulty > 50:
-    print("out of range")
+    if difficulty > 50:
+        print("out of range")
 
 generate_number = random.randint(1, int(difficulty))
 secret_number = generate_number
@@ -26,4 +29,3 @@ def check():
         check()
 
 
-check()
