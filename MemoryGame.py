@@ -2,7 +2,7 @@ import random
 import time
 
 
-def game():
+def play():
     generate_number_of_difficulty = int(input("Choose numbers of difficulty from 1 to 101: "))
     generate_sequence = int(input(f"How many numbers you want to remember to {generate_number_of_difficulty}: "))
     rand_list = []
@@ -12,11 +12,11 @@ def game():
     print(rand_list)
 
     time.sleep(0.7)
-    for i in range(0, 100):
+    for i in range(0, 101):
         print('')
 
     for i in range(0, generate_sequence):
-        print("Enter number you remember")
+        print("Guess number one by one:")
         guess = int(input())
         if guess == rand_list[i]:
             print("Good")
@@ -26,3 +26,4 @@ def game():
 
 
 
+play()

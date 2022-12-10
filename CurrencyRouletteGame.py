@@ -1,18 +1,20 @@
 from currency_converter import CurrencyConverter
 import random
 
-difficult = int(input("Choose difficult: "))
+
 
 
 def get_money_interval():
+    difficult = int(input("Choose difficult: "))
     t = CurrencyConverter()
-    usd = int(random.uniform(1, 100))
-    print(usd, "$")
+    usd = int(random.uniform(1, 101))
+
     con = t.convert(usd, 'USD', 'ILS')
     print(con, "₪")
     high = int(con - (5 - difficult))
     low = int(con + (5 - difficult))
-    print(low, high)
+
+
 
     guess = int(input(f"Guess the course of {usd}$ in ILS: "))
     if low <= guess <= high:
