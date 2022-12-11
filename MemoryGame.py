@@ -2,7 +2,7 @@ import random
 import time
 
 
-def game():
+def play():
     generate_number_of_difficulty = int(input("Choose numbers of difficulty from 1 to 101: "))
     generate_sequence = int(input(f"How many numbers you want to remember to {generate_number_of_difficulty}: "))
     rand_list = []
@@ -26,4 +26,3 @@ def game():
 
 
 
-game()
