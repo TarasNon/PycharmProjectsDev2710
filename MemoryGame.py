@@ -16,13 +16,17 @@ def play():
         print('')
 
     for i in range(0, generate_sequence):
-        print("Enter number you remember")
+        print("Enter number you remember in turn")
         guess = int(input())
         if guess == rand_list[i]:
             print("Good")
         else:
             print("Bad")
             break
+
+
+
+input('Press ENTER to Start')
 
 
 

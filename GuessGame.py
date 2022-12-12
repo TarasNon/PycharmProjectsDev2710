@@ -1,25 +1,26 @@
-import random
+from random import randint
 
+difficulty = int(input("Choose number from 1 to 100 to generate difficulty: "))
 
-def guess():
-    print("TRY TO GUESS NUMBER!!")
-    difficulty = int(input("Choose difficult from 1 to 101: "))
-    generate_number = random.randint(1, difficulty)
-    return generate_number
+generate_number = randint(1, difficulty)
 
+# print(generate_number)
+print("Lets go! You have 10 attempts")
 
-secret_number = guess()
+for play in range(1, 11):
+    get_guess_from_user = int(input("Write number: "))
 
-while True:
-    guess1 = input("Enter your guess or enter quit to exit: ")
-    if guess1 == "quit":
-        print("Thanks for playing!")
+    if get_guess_from_user > generate_number:
+        print("To much!")
+    elif get_guess_from_user < generate_number:
+        print("To low!")
+    else:
+        print(f"You WIN for in {play} attempt")
         break
-    elif int(guess1) == secret_number:
-        print("You got it!!!")
-        break
-    elif int(guess1) < secret_number:
-        print("Try again, too low:")
-    elif int(guess1) > secret_number:
-        print("Try again, too high:")
+    print(f"You used {play} attempt")
+else:
+    print(f"You waste all attempts. The number was {generate_number}")
 
+
+
+input('Press ENTER to Start')

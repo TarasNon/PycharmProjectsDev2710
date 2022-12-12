@@ -2,7 +2,6 @@ from currency_converter import CurrencyConverter
 import random
 
 
-
 def get_money_interval():
     difficult = int(input("Choose difficult from 1 to 101: "))
 
@@ -20,4 +19,4 @@ def get_money_interval():
         print("False")
 
 
-
+input('Press ENTER to Start')
