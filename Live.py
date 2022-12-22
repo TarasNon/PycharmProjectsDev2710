@@ -28,7 +28,7 @@ def load_game():
             print("Error: Enter just numbers please, not letters, words ,etc...")
             continue
         if choose == 1:
-            MemoryGame.play(difficulty)
+            MemoryGame.generate_sequence(difficulty)
             if bool(GuessGame) is True:
                 add_score(difficulty=difficulty)
         if choose == 2:

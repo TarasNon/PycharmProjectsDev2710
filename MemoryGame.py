@@ -2,7 +2,8 @@ import random
 import time
 
 
-def play(difficult):
+def generate_sequence(difficult):
+
     rand_list = []
 
     for i in range(0, difficult):
@@ -24,7 +25,4 @@ def play(difficult):
 
 
 
-
-
-
-
+input('Press ENTER to Start')
